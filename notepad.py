@@ -14,18 +14,18 @@ class nbDark(Frame):
         
         self.winfo_toplevel().title("notepad")
         
-        self.openbutton = Button(main, text='Open', command= lambda: opennew (self), width=6, bg='#191919',
-                          fg='#FFF', background='#101010', activebackground='#000', activeforeground='#FCF8E8', borderwidth=0, relief=SUNKEN)
+        self.openbutton = Button(main, text='Open', command= lambda: opennew (self), width=6,
+                          fg='#FFF', background='#1f3448', activebackground='#1f3448', activeforeground='#1f3448', borderwidth=0, relief=FLAT)
         
         self.savebutton = Button(main, text='Save', command= lambda: savenew (self), width=6, bg ='#191919',
-                          fg='#FFF', background='#101010', activebackground='#000', activeforeground='#FCF8E8', borderwidth=0, relief=SUNKEN)
+                          fg='#FFF', background='#1f3448', activebackground='#1f3448', activeforeground='#1f3448', borderwidth=0, relief=FLAT)
 
         self.separator = Frame(main, bg="#99aab5", height=1)
         self.separator2 = Frame(main, bg="#99aab5", height=1)
         
-        self.buttonseperator = Frame(main, bg="#99aab5", width=1, height=22)
+        self.buttonseperator = Frame(main, bg="#99aab5", width=1, height=10)
 
-        self.write = Text(main, bg='#000', height= 20, fg='#FFF', selectbackground="#465", insertbackground='#99aab5', relief=FLAT, yscrollcommand='TRUE')
+        self.write = Text(main, bg='#0e1520', height= 20, fg='#FFF', selectbackground="#446688", insertbackground='#99aab5', relief=FLAT, yscrollcommand='TRUE')
         
         self.GUI()
      
@@ -42,7 +42,7 @@ class nbDark(Frame):
             
             self.buttonseperator.grid(row=0, column=1, sticky=W)
             
-            self.write['font'] = 'Arial', 12
+            self.write['font'] = 'Arial', 10
             self.write.grid(row=2, column = 0, columnspan=4, sticky=N+S+W+E)
             
             return None
@@ -83,7 +83,7 @@ def main():
     gui.parent.grid_rowconfigure(0, weight=0)
     gui.parent.grid_rowconfigure(1, weight=0)
     gui.parent.grid_rowconfigure(2, weight=1)
-    gui.parent.configure(background = '#101010')
+    gui.parent.configure(background = '#1f3448')
     gui.mainloop()
     
 main()
